@@ -18,7 +18,6 @@ var cacheMutex sync.RWMutex
 
 func main() {
 	mux := http.NewServeMux()
-
 	mux.HandleFunc("/", handleRoot)
 	mux.HandleFunc("POST /users", createUser)
 	mux.HandleFunc("GET /users/{id}", getUser)
